@@ -3,7 +3,7 @@ import { TransitionLink } from "@/components/utils/TransitionLink";
 
 export default function Navbar() {
   return (
-    <div className="flex flex-row justify-between w-full">
+    <div className="flex mx-auto justify-between max-w-7xl w-full">
       <div className="p-6">logo</div>
       <nav className="flex justify-end">
         <ul className="flex space-x-4 m-6">

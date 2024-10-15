@@ -2,9 +2,16 @@
 
 import { useState } from "react";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
-
+import { TransitionButton } from "@/components/utils/TransitionButton";
+// Define the shape of form data
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
 export default function Contact() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     phone: "",
@@ -37,13 +44,30 @@ export default function Contact() {
     }
   };
 
+  // Handle input changes with proper event typing
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData({
+      ...formData,
+      [name]: value, // Dynamically update the state for the correct field
+    });
   };
+  // const handleChange = (
+  //   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  // ) => {
+  //   const { name, value } = e.target;
+  //   setFormData({ ...formData, [name]: value });
+  // };
 
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData({
+  //     ...formData,
+  //     [name]: value,
+  //   });
+  // };
   return (
     <section className="max-w-3xl mx-auto p-6">
       <h1 className="text-3xl font-bold text-center text-black dark:text-white mb-8">
@@ -147,13 +171,12 @@ export default function Contact() {
           </a>
         </p>
         <p>
-          <a
-            href="/"
-            className="mt-8 bg-white text-teal-600 font-semibold py-2 px-4 rounded-full inline-flex items-center"
-          >
-            Back to home
-            <ArrowLeftIcon className="w-5 h-5 ml-2" />
-          </a>
+          <TransitionButton href="/">
+            <button className="mt-8 bg-white text-teal-600 font-semibold py-2 px-4 rounded-full inline-flex items-center">
+              Back to home
+              <ArrowLeftIcon className="w-5 h-5 ml-2" />
+            </button>
+          </TransitionButton>
         </p>
       </div>
     </section>

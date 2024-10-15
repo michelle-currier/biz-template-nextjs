@@ -9,7 +9,7 @@ export default function About() {
       <div className="justify-start items-center p-6">
         <h2 className="text-4xl font-bold">About</h2>
         <Cards />
-        <p>the cards broke it!</p>
+
         <p>
           <a
             href="/"
