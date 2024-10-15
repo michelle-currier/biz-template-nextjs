@@ -11,6 +11,9 @@ const config: Config = {
       // fontFamily: {
       //   sans: ['var(--font-raleway'],
       // },
+      dropShadow: {
+        'sm': '0 1px 2px rgba(0, 0, 0, 0.75)',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

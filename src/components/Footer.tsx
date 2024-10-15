@@ -1,7 +1,7 @@
 import React from "react";
 
 const Footer = () => (
-  <>
+  <div className="mx-auto justify-between max-w-7xl w-full">
     <hr className="w-full border-gray-600 mt-6" />
     <div className="w-full flex justify-between items-end px-6 p-4">
       <div className="w-1/2">
@@ -62,7 +62,7 @@ const Footer = () => (
         <p className="text-sm">©DF Construction Services 2024</p>
       </div>
     </div>
-  </>
+  </div>
 );
 
 export default Footer;

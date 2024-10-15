@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --background: #ffffff;
@@ -14,7 +13,9 @@
     --foreground: #ededed;
   }
 }
-
+html {
+  overflow-x: hidden;
+}
 body {
   color: var(--foreground);
   background: var(--background);
@@ -27,6 +28,12 @@ body {
   opacity: 0;
   background: #000;
   transform: translateY(100px);
+  filter: blur(16px);
+}
+.button-transition {
+  opacity: 0;
+  background: #000;
+  transform: translateX(100px);
   filter: blur(16px);
 }
 @layer base {
