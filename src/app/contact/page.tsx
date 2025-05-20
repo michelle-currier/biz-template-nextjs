@@ -84,15 +84,12 @@ export default function Contact() {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="mt-2 p-3 border border-zinc-700 rounded-md dark:bg-black dark:text-white"
+            className="mt-2 p-3 border border-zinc-700 rounded-md text-black"
             required
           />
         </div>
         <div className="flex flex-col">
-          <label
-            htmlFor="email"
-            className="text-sm font-medium dark:text-white"
-          >
+          <label htmlFor="email" className="text-sm font-medium text-white">
             Your Email
           </label>
           <input
@@ -101,7 +98,7 @@ export default function Contact() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="mt-2 p-3 border border-zinc-700 rounded-md dark:bg-black dark:text-white"
+            className="mt-2 p-3 border border-zinc-700 rounded-md text-black"
             required
           />
         </div>
@@ -115,7 +112,7 @@ export default function Contact() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="mt-2 p-3 border border-zinc-700 rounded-md dark:bg-black dark:text-white"
+            className="mt-2 p-3 border border-zinc-700 rounded-md text-black"
             required
           />
         </div>
@@ -129,7 +126,7 @@ export default function Contact() {
             value={formData.message}
             onChange={handleChange}
             rows={5}
-            className="mt-2 p-3 border border-zinc-700 rounded-md dark:bg-black dark:text-white"
+            className="mt-2 p-3 border border-zinc-700 rounded-md text-black"
             required
           />
         </div>
