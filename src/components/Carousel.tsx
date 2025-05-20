@@ -1,9 +1,14 @@
+"use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Carousel = ({ images }) => {
+interface CarouselProps {
+  images: string[];
+}
+
+const Carousel: React.FC<CarouselProps> = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(null);
+  const [direction, setDirection] = useState<"left" | "right" | null>(null);
 
   const slideVariants = {
     hiddenRight: {
@@ -65,7 +70,8 @@ const Carousel = ({ images }) => {
     );
   };
 
-  const handleDotClick = (index) => {
+  const handleDotClick = (index: number) => {
+    if (index === currentIndex) return;
     setDirection(index > currentIndex ? "right" : "left");
     setCurrentIndex(index);
   };
