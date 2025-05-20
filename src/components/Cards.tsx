@@ -1,4 +1,5 @@
 // import React from "react";
+"use cache";
 import Image from "next/image";
 
 import image1 from "./../images/bulkhead.png";

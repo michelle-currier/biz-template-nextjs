@@ -54,4 +54,15 @@ After push, the site should be triggered to deploy via Vercel
 
 - Content Managment System
 - Styling
+- fonts:
+
+```
+import { Fauna_One } from "@next/font/google";
+
+const fauna = Fauna_One({
+ weight: ["400"],
+ subsets: ["latin"],
+});
+```
+
 - Email for arbitrary addresses

@@ -5,6 +5,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #2563eb;
+  --accent: #5eead4;
+  --light: oklch(96.8% 0.007 247.896);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,6 +39,9 @@ body {
   transform: translateX(100px);
   filter: blur(16px);
 }
+ul li {
+  color: var(--light);
+}
 @layer base {
   html {
     font-family: "Raleway", sans-serif;
@@ -50,8 +56,74 @@ body {
 }
 nav ul li a {
   border-bottom: 0px solid transparent;
+  color: #fff;
 }
 nav ul li a:hover {
   border-bottom: 2px solid #fff;
   transition: border-bottom  500ms ease-in-out;
+}
+
+/* carousel */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
+.App-header {
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  padding-bottom: 2rem;
+}
+.carousel-images {
+  position: relative;
+  border-radius: 10px;
+  height: 400px;
+  max-width: 650px;
+  margin: auto;
+  overflow: hidden;
+}
+.carousel-images img {
+  width: 99%;
+  height: 99%;
+  border-radius: 8px;
+  border: #ff00008e solid 2px;
+}
+.slide_direction {
+  display: flex;
+  justify-content: space-between;
+}
+.left,
+.right {
+  background-color: #fb666675;
+  color: #fff; 
+  margin: 0 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 10px;
+  height: 25px;
+  width: 25px;
+}
+
+.left {
+  left: 0px;
+  padding: 3px 8px 0px 6px;
+}
+
+.right {
+  right: 0;
+  padding: 3px 6px 0px 4px;
+}
+.carousel-indicator {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.dot {
+  background-color: #333;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.active {
+  background-color: #fa2020;
 }
